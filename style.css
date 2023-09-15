@@ -275,6 +275,21 @@ input[type="text"] {
 
 }
 
-.footer {
-  display: block;
+.footer-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 33px;
+  margin-left: 20px;
+
+
+}
+.block-apropos{
+  width: 200px; ;
+  height: 2OOpx;
+}
+.block-hebregements{
+  width: 200px; ;
+  height: 200px;
 }

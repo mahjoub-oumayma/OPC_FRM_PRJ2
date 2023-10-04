@@ -96,6 +96,7 @@ input[type="text"] {
   color: white;
   width: 132px;
   height: 49px;
+  cursor: pointer;
 
 }
 
@@ -119,13 +120,12 @@ input[type="text"] {
   align-items: center;
 }
 
-.IdFilters button {
+.IdFilters .div-filtre {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
   border-radius: 25px;
-  border-color: grey;
+  border: 2px solid #d9d9d9;
   width: 173px;
   height: 50px;
   gap: 10px;
@@ -133,14 +133,16 @@ input[type="text"] {
   font-size: 17px;
 }
 
-.IdFilters button:hover {
-  background-color: grey/Tint2;
+.IdFilters .div-filtre:hover {
+  background-color: #d9d9d9;
 }
 
-.IdFilters button i {
+.IdFilters .div-filtre i {
   margin: 5px 5px 5px 5px;
   color: #0065fc;
+  font-size: medium;
 }
+
 
 .info {
   display: flex;
@@ -475,7 +477,9 @@ a {
 /*Medium devices (tablets, less/equal than 1024px)*/
 @media (max-width: 1024px) {
 
-
+  #navlist a:hover {
+    border-top: 1px solid #0065FC;
+    color: #0065FC;}
 
   .IdHebPop {
     width: 100%;
@@ -485,7 +489,6 @@ a {
 
   .Hebergements {
     width: 100%;
-    height: 611px;
     padding: 30px;
   }
 
@@ -592,36 +595,126 @@ a {
   #logo {
     justify-content: center;
     margin-bottom: 20px;
+    align-items: center;
 
   }
 
   .header {
-    width: 100%;
-    height: 115px;
     display: flex;
+    width: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  #navlist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    text-align: center;
+  }
+
+  #navlist a {
+    width: 50%;
+    border-bottom: 2px solid #d9d9d9
+  }
+
+  #navlist a:hover {
+    border-bottom: 1px solid #0065FC;
+    color: #0065FC;
+  }
+
+  .main-container {
+    margin-top: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .f1 .IdFilters {
+    padding: 0px, 15px, 0px, 15px;
   }
 
   h1 {
-    width: 100%;
-    height: 79px;
-    gap: 8px;
+    width: 80%;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .fa-location-dot {
+    color: black;
+    font-size: larger;
+  }
+
+  input [type="text"] {
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .fa-search {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .rechercher {
+    display: none;
+  }
+
+  #search {
+    width: 49px;
+    height: 49px;
   }
 
   /*filtres*/
   .IdFilters {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
-    height: 161px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+
+  .filter-title {
+    margin-bottom: 10px;
+  }
+
+  .div-filtre {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    text-align: center;
+
+
+  }
+
+  .infobar {
+    margin-top: 120px;
   }
 
   .IdHebPop {
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 28px;
+    margin-left: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
-    height: 2019px;
-    gap: 15px;
   }
 
   /*populaire*/
@@ -629,18 +722,48 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    height: 569px;
-    gap: 15px;
-    flex-wrap: wrap;
+    width: 106%;
+    margin-left: -4%;
+    box-sizing: border-box;
+    margin-top: -22px;
+    gap: 5px;
+    height: auto;
   }
 
   .cardpop {
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
+    margin-left: -14px;
+    box-sizing: border-box;
+    margin-top: -42px;
+    display: flex;
+    height: 576px;
+    justify-content: space-between;
+    padding: 17px;
   }
 
   .cardpop .card {
-    height: 146px;
+    width: 100%;
+    height: 139px;
+    gap: 9px;
+  }
+
+  .pop-title {
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+
+  }
+
+  .section-title {
+    width: 100%;
+    display: flex;
+  }
+
+  .cardpop img {
+    width: 100%;
+    padding-bottom: 5px;
   }
 
   /*hebergrment*/
@@ -649,56 +772,125 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1435px;
-    gap: 15px;
+    background: none;
+    margin-top: -14px;
+    margin-left: -4px;
+    padding: 7px;
   }
 
-  .Hebergements .card {
+  .card-Heb .card {
+    margin-top: 30px;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 3px 15px) rgba(0, 0, 0, 0.f1);
     width: 100%;
-    height: 208px;
-    gap: 4px;
+
+  }
+
+  .card-Heb {
+    width: 100%;
+    margin-top: -22px;
+    margin-left: -7px;
+
+  }
+
+  .card-Heb img {
+    width: 100%;
+  }
+
+  .heb-title {
+    margin-left: -4px;
+    margin-top: -36px;
   }
 
   /*activites*/
-  .activites {
+  .Activities {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 965px;
+    margin-top: 1000px;
+    padding-top: 30px;
+    gap: 30px;
+    margin-left: 0;
+    margin-right: 0
+  }
+
+  .ac-title h2 {
+    display: flex;
+    padding-left: 30px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .card-ac {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+
   }
 
   .card-ac .card {
-    width: 315px;
+    width: 100%;
     height: 200px;
+    border-radius: 20px, 20px, 0px, 0px;
+    padding: 0
+  }
+
+  .card-ac img {
+    width: 100%;
+    height: 141px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-sizing: border-box;
+  }
+
+  .card-ac .container {
+    margin-top: -17px;
+    padding-top: 20px;
+    padding-left: 19px;
+    padding-bottom: 20px;
+    padding-right: 19px;
+    height: 59px;
   }
 
   /*footer*/
-  .footer-all {
-    display: flex;
+  .footer {
+    background: #F2F2F2;
+    margin-right: -10%;
+    margin-left: -3%;
+  }
+
+  .footer-all{
     flex-direction: column;
     width: 100%;
-    height: 461px;
+    margin-top: 550px;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    gap: 0px;
+    padding: 0;
   }
 
   .block-apropos {
-    width: 264px;
-    ;
-    height: 123px;
+    width: 100%;
     gap: 15px;
+    padding: 30px;
+    background-color: #F2F2F2;
   }
 
   .block-hebergements {
-    width: 264px;
-    ;
-    height: 89px;
+    width: 100%;
     gap: 15px;
-    ;
+    padding: 30px;
+    background-color: #F2F2F2;
+
   }
 
-  .block-assistances {
-    width: 264px;
-    height: 89px;
+  .bloc-assistance {
+    width: 100%;
     gap: 15px;
-
+    padding: 30px;
+    background-color: #F2F2F2;
   }
 }
+
+

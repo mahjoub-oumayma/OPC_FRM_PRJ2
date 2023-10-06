@@ -25,7 +25,7 @@
             </div>
         </header>
         <main>
-            <section>
+            <section class="recherche">
                 <div>
                     <h1> Trouvez votre hébèrgement pour des vacances de rêve </h1>
                    <span class="important"> En plein centre ville ou en plein nature</span>
@@ -34,17 +34,28 @@
                     <form class="f1" method="get" action="#">
                         <span id="pos" class="fa-solid fa-location-dot"></span>
                         <input type="text" placeholder="Marseille,France">
-                        <button id="search"><i class="rechercher">Rechercher</i> <i class="fa-solid fa-search"></i></button>
+                        <button id="search"><span class="rechercher">Rechercher</span> <i class="fa-solid fa-search"></i></button>
                     </form>
                 </div>
             </section>
-            <section>
+            <section class="filtres">
                 <div class="IdFilters">
                     <h2 class="filter-title">Filtres</h2>
-                    <div class="div-filtre"><i class="fa-solid  fa-money-bill-1-wave"></i> Economique</div>
-                    <div class="familiale"><div class="div-filtre"><i class="fa-solid fa-person"></i> Familiale</div></div>
-                    <div class="div-filtre"><i class="fa-solid fa-heart"></i> Romantique</div>
-                    <div class="div-filtre"><i class="fa-solid fa-fire"></i> Nos pépites</div>
+                    <div class="div-filtres">
+                        <div class="div-filtre">
+                           <i class="fa-solid  fa-money-bill-1-wave"></i> Economique
+                        </div>
+                        <div class="div-filtre">
+                           <i class="fa-solid fa-person"></i> Familiale
+                        </div>
+                        <div class="div-filtre">
+                           <i class="fa-solid fa-heart"></i> Romantique
+                        </div>
+                        <div class="div-filtre">
+                           <i class="fa-solid fa-fire"></i> Nos pépites
+                       
+                        </div>
+                    </div>
                 </div>
                 <div Class="infobar">
                     <span class="info"><i class="fa-solid fa-info"></i></span>
@@ -104,7 +115,8 @@
                                     <div class="card-txt">
                                         <h3 class="card-title">Hôtel les mouettes</h3>
                                         <p class="card-subtitle">Nuit a partir de 76<span
-                                                class="fa-solid fa-euro"></span></p>
+                                                class="fa-solid fa-euro"></span>
+                                        </p>
                                     </div>
                                     <div class="card-rating">
                                         <span class="fa fa-star fa-xs checked"></span>
@@ -180,10 +192,7 @@
                     <P class="Afficher">Afficher plus</P>
                 </section>
                 <aside class="populaires">
-                    <div class="pop-title">
-                        <h2 class="section-title">les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                    </div>
+                        <h2 class="section-title">les plus populaires <i class="fa-solid fa-chart-line" aria-hidden="true"></i></h2>
                     <div class="cardpop">
                         <a href="#">
                             <article class="card">
@@ -251,57 +260,57 @@
                     <h2>Activités a marseille</h2>
                 </div>
                 <div class="card-ac">
-                    <a href="#">
-                        <article class="card">
+                    <article class="card">
+                        <a href="#">
                             <img src="images/activities/reno-laithienne.jpg" alt="image de vieux-port">
                             <div class="container">
                                 <h3>Vieux-port</h3>
                             </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="card">
+                        </a>   
+                    </article>
+                    <article class="card">
+                        <a href="#">
                             <img src="images/activities/paul-hermann.jpg" alt="image de fort de pomégues">
                             <div class="container">
                                 <h3>Fort de pomegues</h3>
                             </div>
-                        </article>
-                    </a>
-                    <a href="#">
+                        </a>   
+                    </article>
                         <article class="card">
+                            <a href="#">
                             <img src="images/activities/kilyan-sockalingum.jpg" alt="image de national des calanques">
                             <div class="container">
-                                <h3> National des calanques</h3>
+                                <h3> Parc National des calanques</h3>
                             </div>
+                            </a>
                         </article>
-                    </a>
-                    <a href="#">
                         <article class="card">
+                            <a href="#">
                             <img src="images/activities/florian-wehde.jpg" alt="image de notre-dame-de-la-garde">
                             <div class="container">
                                 <h3>notre-dame-de-la-garde</h3>
                             </div>
+                            </a>
                         </article>
-                    </a>
                 </div>
             </section>
         </main>
         <footer class="footer">
             <div class="footer-all">
-                <div class="block-apropos">
-                    <h4>À propos</h4>
+                <div>
+                    <h3>À propos</h3>
 
                     <p>Fonctionnement du site</p>
                     <p>Condition générales</p>
                     <p>Données et confidentialité</p>
                 </div>
-                <div class="block-hebergements">
-                    <h4>Nos hébergements</h4>
+                <div>
+                    <h3>Nos hébergements</h3>
                     <p>charet qualité</p>
                     <p>proposer votre hotel</p>
                 </div>
 
-                <div class="bloc-assistance">
+                <div>
                     <h4>Assistance</h4>
                     <p>centre d'aide</p>
                     <p>nous contacter</p>

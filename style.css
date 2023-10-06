@@ -1,5 +1,5 @@
 * {
-  font-family: raleway
+  font-family: raleway,sans-serif;
 }
 
 * {
@@ -10,7 +10,6 @@
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
-  box-sizing: border-box;
 }
 
 
@@ -18,12 +17,11 @@
   display: flex;
   justify-content: space-between;
   background: white;
-  clear: both;
-  height: 75px;
+  margin: bottom 50px; 
 }
 
 #logo {
-  margin: 0;
+  margin-top: 30px;
   width: 61px;
   height: 19px;
 }
@@ -31,11 +29,7 @@
 body {
   display: flex;
   justify-content: center;
-}
-
-h1 {
-  height: 20px;
-  gap: 8px;
+  margin: 0;
 }
 
 .important {
@@ -44,10 +38,17 @@ h1 {
 
 #navlist {
   display: flex;
-  width: 328px;
-  height: 35px;
   padding: 0px, 25px, 0px, 25px;
   gap: 68px;
+}
+#navlist a{
+  border-top: 2px solid transparent;
+  padding-top: 15px;
+}
+
+#navlist a:hover{
+  border-top: 2px solid #0065FC;
+  color: #0065FC;
 }
 
 .f1 {
@@ -69,6 +70,12 @@ input[type="text"] {
   height: 48px;
   width: 195px;
   justify-content: center;
+  padding-left: 20px;
+}
+
+input[type="text"]::placeholder{
+  color:#000000;
+  opacity: 1;
 }
 
 #pos {
@@ -76,11 +83,9 @@ input[type="text"] {
   justify-content: center;
   border: 1px solid #F2F2F2;
   background-color: #F2F2F2;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  width: 60px;
+  width: 50px;
   height: 49px;
-  border-radius: 15px, 0px, 0px, 15px;
+  border-radius: 15px, 0 0 15px;
   align-items: center;
 }
 
@@ -89,15 +94,14 @@ input[type="text"] {
   font-weight: 700;
   font-size: 18px;
   align-items: center;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 0 15px, 15px, 0;
   border-color: #0065FC;
   background-color: #0065FC;
   color: white;
-  width: 132px;
   height: 49px;
   cursor: pointer;
-
+  text-align: center;
+  padding: 0 15px;
 }
 
 .fa-search {
@@ -107,9 +111,7 @@ input[type="text"] {
 .IdFilters {
   display: flex;
   gap: 15px;
-  flex-wrap: row;
-  width: 758px;
-  height: 50px;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -120,17 +122,22 @@ input[type="text"] {
   align-items: center;
 }
 
+.IdFilters .div-filtres {
+  display: flex;
+  gap: 20px;
+}
+
 .IdFilters .div-filtre {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
   border: 2px solid #d9d9d9;
-  width: 173px;
   height: 50px;
   gap: 10px;
   font-weight: 700;
   font-size: 17px;
+  padding: 10px;
 }
 
 .IdFilters .div-filtre:hover {
@@ -149,11 +156,13 @@ input[type="text"] {
   justify-content: center;
   width: 24px;
   height: 24px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   border-radius: 100%;
   color: #0065fc;
-  margin: 15px;
   align-items: center;
+}
+.fa-info{
+  font-size: 12px;
 }
 
 .infobar {
@@ -161,6 +170,7 @@ input[type="text"] {
   display: flex;
   display: rwo;
   align-items: center;
+  gap: 10px;
 }
 
 .infobar p {
@@ -202,27 +212,26 @@ a {
   justify-content: space-between;
   border-radius: 20px;
   /*padding: 30px;*/
-  box-sizing: border-box;
+  margin-top: 30px;
+  gap: 10px;
 }
 
 /****** hebergements ***********/
 .Hebergements {
-  width: 871px;
-  height: 611px;
+  max-width: 871px;
   background-color: #F2F2F2;
   border-radius: 15px;
-  margin-top: 30px;
+  padding: 30px;
+  width: 100%;
 }
 
 /****** Populaires ***********/
 .populaires {
-  width: 429px;
-  height: 611px;
+  max-width: 429px;
   justify-content: space-between;
   background-color: #F2F2F2;
   border-radius: 15px;
-  margin-top: 30px;
-  margin-left: 20px;
+  padding: 30px;
 }
 
 /****** hebergements section ***********/
@@ -232,23 +241,20 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
   border-radius: 15px;
-  gap: 20px;
+  row-gap: 30px;
+  column-gap: 24px;
   justify-content: center;
 }
 
 .card-Heb .card {
-  width: 250px;
-  height: 207px;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  max-width: 250px;
+  width: 32%;
   gap: 4px;
 }
 
 .heb-title h2 {
   display: flex;
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 0px;
   font-weight: 700;
   font-size: 22px;
   height: 26px;
@@ -262,10 +268,10 @@ a {
 }
 
 .card-Heb .container {
-  width: 250px;
-  height: 64px;
+  width: 100%;
   gap: 8px;
   display: block;
+  padding-bottom: 10px;
 }
 
 .card-Heb .card-title {
@@ -275,7 +281,6 @@ a {
   margin-bottom: 4px;
   margin-right: 10px;
   margin-left: 10px;
-  height: 19px;
 }
 
 .card-Heb .card-subtitle {
@@ -284,7 +289,6 @@ a {
   margin-left: 10px;
   line-height: 16px;
   margin-top: 4px;
-  height: 16px;
 }
 
 .card-Heb .card-rating {
@@ -294,7 +298,6 @@ a {
 }
 
 .Afficher {
-  margin-left: 30px;
   margin-top: 40px;
   font-weight: 700;
   font-size: 18px;
@@ -302,61 +305,49 @@ a {
 }
 
 /****** Populaires sections***********/
-.pop-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 30px;
-  margin-top: 10px;
-}
 
 .section-title {
   font-weight: 700;
   font-size: 22px;
-  width: 300px;
   height: 26px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.pop-title i {
-  margin-right: 15px;
+.section-title i {
   color: #0065fc;
 }
 
 .cardpop {
-  display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 369px;
-  height: 492px;
   gap: 30px;
 }
 
 .cardpop .card {
   display: flex;
-  width: 369px;
+  max-width: 369px;
   height: 144px;
-  margin-left: 30px;
-  margin-right: 8px;
-  margin-top: 30px;
 }
 
 
 .cardpop img {
   display: flex;
-  width: 123px;
+  max-width: 123px;
+  width: 33%;
   height: 134px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 .cardpop .card-content {
-  width: 246px;
-  height: 134px;
   display: flex;
   margin-left: 10px;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box;
   gap: 24px;
 }
 
@@ -390,96 +381,74 @@ a {
 /*******activites********/
 
 .ac-title h2 {
-  margin-top: 50px;
+  margin-top: 61px;
   font-weight: 700;
   font-size: 22px;
 }
 
-.activites {
-  width: 1340px;
-  height: 559px;
+.Activites {
+  width: 100%;
+  padding: 30px;
 }
 
 .card-ac {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
-  border-radius: 100px;
-  gap: 20px;
-  width: 1280px;
-  ;
-  height: 439px;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 30px;
+  margin-left: 6px;
 }
 
 .card-ac .card {
-  margin-top: 10px;
-  margin-left: 5px;
-  width: 297px;
-  height: 439px;
+  max-width: 297px;
+  width: 24%;
   border-radius: 20px;
   box-shadow: 0px 3px 15px 0px #0000001A;
-
+  padding: 0;
 }
 
 .card-ac img {
   width: 100%;
   height: 380px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .card-ac .container {
   display: flex;
-  width: 259.5px;
-  height: 19px;
+  width: 100%;
+  line-height: 19px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  margin-left: 20px;
-
-
+  padding: 0 10px 5px 10px;
+}
+.card-ac h3{
+  font-size: 16px;
 }
 
 .footer-all {
   display: flex;
   flex-direction: row;
-  width: 1340px;
-  height: 163px;
+  width: 100%;
   margin-top: 50px;
-  gap: 150px;
+  padding-left: 20px;
   background-color: #F2F2F2;
 }
 
-.block-apropos {
-  width: 446px;
+.footer-all div {
+  width: 33%;
   height: 163px;
   gap: 15px;
   padding: 20px;
-}
-
-.block-hebregements {
-  width: 446px;
-  height: 163px;
-  gap: 15px;
-  padding: 2Opx;
-}
-
-.block-assistances {
-  width: 446px;
-  height: 163px;
-  gap: 15px;
-  padding: 20px;
-
 }
 
 /*Medium devices (tablets, less/equal than 1024px)*/
 @media (max-width: 1024px) {
-
-  #navlist a:hover {
-    border-top: 1px solid #0065FC;
-    color: #0065FC;}
+   
+  .IdFilters{
+    flex-wrap: wrap;
+  }
 
   .IdHebPop {
     width: 100%;
@@ -495,9 +464,7 @@ a {
   /*populaires*/
   .populaires {
     width: 100%;
-    height: 252px;
-    margin-top: 50px;
-
+  max-width: none;
   }
 
   .pop-title {
@@ -506,19 +473,17 @@ a {
 
   .cardpop {
     width: 100%;
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 10px;
     flex-wrap: nowrap;
-
   }
 
-  .cardpop .card {
-    width: 274px;
-    height: 146px;
+  .cardpop a {
+    width: 33%;
   }
-
+  .card-ac img {
+    height: 200px;
+  }
 
   .cardpop .card-title {
     font-size: 14px;
@@ -528,69 +493,21 @@ a {
     font-size: 13px;
   }
 
-  /*Activités à marseille*/
-  .activities {
-
-    width: 100%;
-    height: 390px;
-    margin-top: 50px;
-  }
-
-  .card-ac {
-    display: flex;
-    justify-content: left;
-    flex-direction: row;
-    gap: 20px;
-
-  }
-
-
-  .card-ac .card {
-    margin-top: 10px;
-    width: 193px;
-    height: 270px;
-    border-radius: 15px;
-  }
-
-  .card-ac img {
-    width: 100%;
-    height: 85%;
-    border-radius: 15px;
-  }
-
-  .card-ac .container {
-    font-size: small;
-  }
 
   /*footer*/
   .footer-all {
-    width: 100%;
-    height: 163px;
-    gap: 30px;
+    justify-content: space-between;
+    gap: none;
   }
 
-  .block-apropos {
-    width: 288px;
-    height: 163px;
-    gap: 15px;
-  }
-
-  .block-hebergements {
-    width: 288px;
-    height: 163px;
-    gap: 15px;
-  }
-
-  .bloc-assistance {
-    width: 288px;
-    height: 163px;
-    gap: 15px;
-  }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
 
+  .main-container {
+    padding: 0;
+  }
   /*header*/
   #logo {
     justify-content: center;
@@ -609,8 +526,6 @@ a {
   }
 
   #navlist {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -620,29 +535,34 @@ a {
 
   #navlist a {
     width: 50%;
-    border-bottom: 2px solid #d9d9d9
+    border-bottom: 2px solid #d9d9d9;
+    border-top: none;
+    padding-bottom: 20px;
   }
 
   #navlist a:hover {
-    border-bottom: 1px solid #0065FC;
+    border-bottom: 2px solid #0065FC;
     color: #0065FC;
+    border-top: none;
   }
-
-  .main-container {
-    margin-top: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .f1 .IdFilters {
-    padding: 0px, 15px, 0px, 15px;
+   /*recherche*/
+  .rechercher {
+    padding: 0,  15px;
+  
+  
   }
 
   h1 {
-    width: 80%;
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 40px;
+    margin-left: 15px;
+  }
+  .important{
+    margin-left: 15px;
+  }
+  .f1{
+    margin-left: 15px;
   }
 
   .fa-location-dot {
@@ -653,7 +573,6 @@ a {
   input [type="text"] {
     text-align: center;
     color: black;
-    box-sizing: border-box;
     align-items: center;
   }
 
@@ -674,87 +593,48 @@ a {
   }
 
   /*filtres*/
-  .IdFilters {
-    display: flex;
+  .filtres{
+    padding: 0 15px;
+  }
+  .div-filtres{
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-between;
-    margin-bottom: 10px;
-    margin-right: 30px;
-    margin-top: 20px;
-    box-sizing: border-box;
   }
-
-  .filter-title {
-    margin-bottom: 10px;
+  .div-filtre{
+    width: 46%;
+    
   }
-
-  .div-filtre {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    border: 1px solid #d9d9d9;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    text-align: center;
-
-
-  }
-
-  .infobar {
-    margin-top: 120px;
-  }
-
+ 
   .IdHebPop {
-    background-color: white;
-    border-radius: 20px;
-    box-sizing: border-box;
-    margin-top: 28px;
-    margin-left: 8px;
-    display: flex;
+   
     flex-direction: column-reverse;
-    width: 100%;
+  
   }
 
   /*populaire*/
   .populaires {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 106%;
-    margin-left: -4%;
-    box-sizing: border-box;
-    margin-top: -22px;
-    gap: 5px;
-    height: auto;
+    width: 100%;
+    border-radius: 0;
+    padding: 15px;
+
   }
 
   .cardpop {
-    width: 90%;
+
     flex-direction: column;
-    margin-left: -14px;
-    box-sizing: border-box;
-    margin-top: -42px;
-    display: flex;
-    height: 576px;
-    justify-content: space-between;
-    padding: 17px;
   }
 
+  .cardpop a{
+    width: 100%;
+  }
   .cardpop .card {
     width: 100%;
     height: 139px;
     gap: 9px;
+    max-width: none;
   }
 
-  .pop-title {
-    width: 86%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-
-  }
 
   .section-title {
     width: 100%;
@@ -773,15 +653,12 @@ a {
     flex-direction: column;
     width: 100%;
     background: none;
-    margin-top: -14px;
-    margin-left: -4px;
-    padding: 7px;
+    padding: 15px;
+    row-gap: 30px;
   }
 
   .card-Heb .card {
-    margin-top: 30px;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 3px 15px) rgba(0, 0, 0, 0.f1);
+    max-width: none;
     width: 100%;
 
   }
@@ -796,7 +673,6 @@ a {
   .card-Heb img {
     width: 100%;
   }
-
   .heb-title {
     margin-left: -4px;
     margin-top: -36px;
@@ -807,25 +683,22 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 1000px;
-    padding-top: 30px;
+    padding: 15px;
     gap: 30px;
-    margin-left: 0;
-    margin-right: 0
+
   }
 
   .ac-title h2 {
     display: flex;
-    padding-left: 30px;
     margin-top: 30px;
     font-weight: 700;
     font-size: 22px;
   }
 
   .card-ac {
-    justify-content: center;
-    width: 100%;
-    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    row-gap: 20px;
 
   }
 
@@ -833,7 +706,8 @@ a {
     width: 100%;
     height: 200px;
     border-radius: 20px, 20px, 0px, 0px;
-    padding: 0
+    padding: 0;
+    max-width: none;
   }
 
   .card-ac img {
@@ -841,7 +715,6 @@ a {
     height: 141px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    box-sizing: border-box;
   }
 
   .card-ac .container {
@@ -856,41 +729,18 @@ a {
   /*footer*/
   .footer {
     background: #F2F2F2;
-    margin-right: -10%;
-    margin-left: -3%;
   }
 
-  .footer-all{
+  .footer-all {
     flex-direction: column;
     width: 100%;
-    margin-top: 550px;
-    box-sizing: border-box;
-    background-color: #F2F2F2;
-    gap: 0px;
-    padding: 0;
+   padding-left: 15px;
   }
 
-  .block-apropos {
+  .footer-all div {
     width: 100%;
-    gap: 15px;
-    padding: 30px;
-    background-color: #F2F2F2;
-  }
-
-  .block-hebergements {
-    width: 100%;
-    gap: 15px;
-    padding: 30px;
-    background-color: #F2F2F2;
 
   }
 
-  .bloc-assistance {
-    width: 100%;
-    gap: 15px;
-    padding: 30px;
-    background-color: #F2F2F2;
-  }
+  
 }
-
-
